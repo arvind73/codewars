@@ -1,0 +1,24 @@
+def get_strings(city):
+ 
+    city = "".join(city.lower().split()) # get rid of all spaces and turn all characters into lower case characters
+ 
+    city_list = list(city) # next turn the city string into a list
+ 
+    already = [] # this is used to hold the character which has already counted before
+ 
+    city_string = '' # this is the city string which will be returned
+ 
+    for word in city_list:
+ 
+        if word not in already:
+ 
+            count = city_list.count(word)
+            city_string += word + ":"
+ 
+            for i in range(0, count):
+                city_string += "*"
+ 
+            city_string+= ","
+            already.append(word)
+ 
+    return city_string[:-1]
