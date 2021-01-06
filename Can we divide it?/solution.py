@@ -6,3 +6,4 @@ def is_divide_by(number, a, b):
 
 
 print(is_divide_by(33,1,10))
+# return False
